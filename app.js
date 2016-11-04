@@ -101,9 +101,17 @@ app.post('/materialInventory',function(request,response){
 })  
 
 app.post('/processWS1',function(req,res){    
-    return "hello";
     console.log("processWS1 ");
+    return "hello 1";
+    
 })  
+
+app.get('/processWS2',function(req,res){  
+console.log("processWS2 ");  
+    res.end("hello 2");
+    
+}) 
+
 app.locals.getFacilities = function() {
     ibmdb.open(global.dbConnString, function(err, conn) {
         if (err) {
